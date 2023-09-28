@@ -17,7 +17,7 @@ def available_books():
 
 
 # 1.2 TODO: Run the 'available_books' function
-available_books()
+# available_books()
 
 print('-----------------------')
 # 1.3 TODO: Create a function named 'check_out' that removes a book from the books list
@@ -33,12 +33,12 @@ def check_out(book_title: str):
 
 
 # 1.4 TODO: Check out 'THE POWER OF MOMENTS' using the check_out function
-check_out('THE POWER OF MOMENTS')
+# check_out('THE POWER OF MOMENTS')
 
 # 1.5 TODO: Run the 'available_books' function again to see if the book was checked out
-available_books()
+# available_books()
 
-print('-----------------------')
+# print('-----------------------')
 # 1.6 TODO: Create a function 'check_in' that adds a book to the end of the books list
 # Parameters: book_title (string)
 # Return: Not needed for this function
@@ -49,12 +49,12 @@ def check_in(book_title: str):
 
 
 # 1.7 TODO: Check in 'THE POWER OF MOMENTS' using the check_in function
-check_in('THE POWER OF MOMENTS')
+# check_in('THE POWER OF MOMENTS')
 
 # 1.8 TODO: Run the 'available_books' function to see if the book was checked in
-available_books()
+# available_books()
 
-print('-----------------------')
+# print('-----------------------')
 # 1.9 TODO: Create a function 'search_by_name' that prints 'Available' if exists in books list, 'Not Available' if it doesn't.
 # Parameters: book_title (string)
 # Return: Not needed for this function
@@ -68,10 +68,10 @@ def search_by_name(book_title: str):
 
 
 # 1.10 TODO: Search for the book 'JUST MERCY'
-search_by_name('JUST MERCY')
+# search_by_name('JUST MERCY')
 
 # 1.11 TODO: Search for the book '4000 WEEKS'
-search_by_name('4000 WEEKS')
+# search_by_name('4000 WEEKS')
 
 # Here's the same list of books, with additional details
 
@@ -161,7 +161,7 @@ def count_books() -> int:
 
 # 2.2 TODO: Check the number of books available in the books list using the `count_books` function
 # HINT: Does `return` print anything out?
-count_books()
+# count_books()
 
 # 2.3 TODO: Create a function 'search_by_author' that returns the titles of books by an author
 # Parameters - author (string)
@@ -179,4 +179,4 @@ def search_by_author(author: str) -> list[str]:
 
 # 2.4 TODO: Search for book titles by the author 'Yuval Noah Harari' using the search_by_author function
 # HINT: Remember again-- return doesn't print anything out. How can we print the output of the function?
-search_by_author('Yuval Noah Harari')
+# search_by_author('Yuval Noah Harari')
