@@ -11,8 +11,13 @@ books = [
 # Return: Not needed for this function
 
 
-# 1.2 TODO: Run the 'available_books' function
+def available_books():
+    for book in books:
+        print(book)
 
+
+# 1.2 TODO: Run the 'available_books' function
+available_books()
 
 print('-----------------------')
 # 1.3 TODO: Create a function named 'check_out' that removes a book from the books list
@@ -20,11 +25,18 @@ print('-----------------------')
 # Return: Not needed for this function
 
 
-# 1.4 TODO: Check out 'THE POWER OF MOMENTS' using the check_out function
+def check_out(book_title: str):
+    try:
+        books.remove(book_title)
+    except ValueError:
+        None
 
+
+# 1.4 TODO: Check out 'THE POWER OF MOMENTS' using the check_out function
+check_out('THE POWER OF MOMENTS')
 
 # 1.5 TODO: Run the 'available_books' function again to see if the book was checked out
-
+available_books()
 
 print('-----------------------')
 # 1.6 TODO: Create a function 'check_in' that adds a book to the end of the books list
@@ -32,11 +44,15 @@ print('-----------------------')
 # Return: Not needed for this function
 
 
-# 1.7 TODO: Check in 'THE POWER OF MOMENTS' using the check_in function
+def check_in(book_title: str):
+    books.append(book_title)
 
+
+# 1.7 TODO: Check in 'THE POWER OF MOMENTS' using the check_in function
+check_in('THE POWER OF MOMENTS')
 
 # 1.8 TODO: Run the 'available_books' function to see if the book was checked in
-
+available_books()
 
 print('-----------------------')
 # 1.9 TODO: Create a function 'search_by_name' that prints 'Available' if exists in books list, 'Not Available' if it doesn't.
@@ -44,11 +60,18 @@ print('-----------------------')
 # Return: Not needed for this function
 
 
-# 1.10 TODO: Search for the book 'JUST MERCY'
+def search_by_name(book_title: str):
+    if book_title in books:
+        print('Available')
+    else:
+        print('Not Available')
 
+
+# 1.10 TODO: Search for the book 'JUST MERCY'
+search_by_name('JUST MERCY')
 
 # 1.11 TODO: Search for the book '4000 WEEKS'
-
+search_by_name('4000 WEEKS')
 
 # Here's the same list of books, with additional details
 
@@ -125,15 +148,20 @@ books_with_details = [
 # 2.0 TODO: In a comment, describe the structure of the data in books_with_details.
 # What types of data are nested within others? How do you know?
 
+# book_with_details is an array with dictionaries nested in it.
+# It is an array because of '[]' syntax; the nested data are dictionaries because of the 'key:value' syntax.
+# The keys as well as the values are strings.
 
 # 2.1 TODO: Create a function called 'count_books' that returns the number of books in the books_with_details list
 # Parameters: Not needed for this function
 # Return: number of books (integer)
+def count_books() -> int:
+    return len(books_with_details)
 
 
 # 2.2 TODO: Check the number of books available in the books list using the `count_books` function
 # HINT: Does `return` print anything out?
-
+count_books()
 
 # 2.3 TODO: Create a function 'search_by_author' that returns the titles of books by an author
 # Parameters - author (string)
@@ -141,5 +169,14 @@ books_with_details = [
 # Hint - You will need a for loop, if statement, and .append() for this solution!
 
 
+def search_by_author(author: str) -> list[str]:
+    books_by_author = []
+    for book in books_with_details:
+        if book['author'] == author:
+            books_by_author.append(book['title'])
+    return books_by_author
+
+
 # 2.4 TODO: Search for book titles by the author 'Yuval Noah Harari' using the search_by_author function
 # HINT: Remember again-- return doesn't print anything out. How can we print the output of the function?
+search_by_author('Yuval Noah Harari')
